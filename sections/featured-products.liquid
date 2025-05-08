@@ -1,0 +1,11 @@
+<section class="featured-products">
+  <h2>Featured Products</h2>
+  <div class="product-grid">
+    {% for product in collections.frontpage.products limit:8 %}
+      <div class="product-card">
+        <a href="{{ product.url }}">{{ product.title }}</a>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    {% endfor %}
+  </div>
+</section>

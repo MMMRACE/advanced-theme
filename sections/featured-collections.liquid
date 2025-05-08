@@ -1,0 +1,10 @@
+<section class="featured-collections">
+  <h2>Shop by Category</h2>
+  <div class="collection-grid">
+    {% for collection in collections limit:4 %}
+      <div class="collection-card">
+        <a href="{{ collection.url }}">{{ collection.title }}</a>
+      </div>
+    {% endfor %}
+  </div>
+</section>

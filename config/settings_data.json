@@ -1,0 +1,11 @@
+{
+  "current": {
+    "theme": {},
+    "sections": {
+      "vehicle-selector": { "type": "vehicle-selector" },
+      "brand-banner": { "type": "brand-banner" },
+      "main-featured": { "type": "featured-products" },
+      "main-collections": { "type": "featured-collections" }
+    }
+  }
+}

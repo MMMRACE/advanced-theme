@@ -1,0 +1,24 @@
+<section class="vehicle-selector">
+  <h3>Select Your Vehicle</h3>
+  <form>
+    <select name="year" id="year-selector"><option>Year</option></select>
+    <select name="make" id="make-selector"><option>Make</option></select>
+    <select name="model" id="model-selector"><option>Model</option></select>
+    <button type="submit">Find Parts</button>
+  </form>
+  <script>
+    const years = [2022,2023,2024];
+    const makes = ["Ford","Chevrolet"];
+    const models = {"Ford": ["Mustang", "F-150"], "Chevrolet": ["Camaro", "Silverado"]};
+    const ySel = document.getElementById('year-selector');
+    const mSel = document.getElementById('make-selector');
+    const moSel = document.getElementById('model-selector');
+    years.forEach(y => ySel.innerHTML += `<option value="${y}">${y}</option>`);
+    mSel.addEventListener('change', e => {
+      const selectedMake = e.target.value;
+      moSel.innerHTML = '<option>Model</option>';
+      (models[selectedMake] || []).forEach(m => moSel.innerHTML += `<option>${m}</option>`);
+    });
+    Object.keys(models).forEach(mk => mSel.innerHTML += `<option>${mk}</option>`);
+  </script>
+</section>

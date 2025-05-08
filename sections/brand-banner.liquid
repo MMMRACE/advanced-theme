@@ -1,0 +1,8 @@
+<section class="brand-banner">
+  <h2>Top Brands</h2>
+  <div class="brand-logos">
+    {% for i in (1..5) %}
+      <div class="brand"><img src="{{ 'brand' | append: i | asset_url }}" alt="Brand {{ i }}"></div>
+    {% endfor %}
+  </div>
+</section>
